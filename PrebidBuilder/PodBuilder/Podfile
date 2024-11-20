@@ -1,0 +1,16 @@
+require "pod_builder/core"
+PodBuilder::Configuration::load
+
+platform :ios, "15.0"
+
+use_frameworks!
+
+target "FrameworkBuilder" do
+  pod "PrebidMobile", :path => "../../"
+  pod "PrebidMobileGAMEventHandlers", :path => "../../"
+  pod "Google-Mobile-Ads-SDK", "=11.2.0"
+end
+
+pre_install do |installer|
+  raise "\n🚨  Do not launch 'pod install' manually, use `pod_builder` instead!\n" if !File.exist?("pod_builder.lock")
+end

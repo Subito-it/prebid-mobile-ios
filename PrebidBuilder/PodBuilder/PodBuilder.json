@@ -1,0 +1,40 @@
+{
+  "project_name": "FrameworkBuilder",
+  "spec_overrides": {
+    "PrebidMobile": {
+      "static_framework": true
+    }
+  },
+  "skip_licenses": [],
+  "skip_pods": [],
+  "skip_build_configuration_check": [],
+  "force_prebuild_pods": [],
+  "build_settings": {
+    "GENERATE_MASTER_OBJECT_FILE": "YES",
+    "ENABLE_BITCODE": "NO",
+    "GCC_OPTIMIZATION_LEVEL": "s",
+    "SWIFT_OPTIMIZATION_LEVEL": "-Osize",
+    "SWIFT_COMPILATION_MODE": "wholemodule",
+    "CODE_SIGN_IDENTITY": "Apple Distribution: Subito.it srl (HUC4RY3F6U)",
+    "CODE_SIGNING_REQUIRED": "NO",
+    "CODE_SIGN_ENTITLEMENTS": "",
+    "CODE_SIGNING_ALLOWED": "NO"
+  },
+  "build_settings_overrides": {},
+  "license_filename": "Pods-acknowledgements",
+  "restore_enabled": true,
+  "deterministic_build": false,
+  "build_using_repo_paths": false,
+  "react_native_project": false,
+  "development_team": "HUC4RY3F6U",
+  "subspecs_to_split": [],
+  "allow_building_development_pods": true,
+  "library_evolution_support": true,
+  "use_bundler": true,
+  "build_system": "Latest",
+  "build_xcframeworks_all": true,
+  "remap_coverage_to_project_root": false,
+  "generate_coverage": false,
+  "keep_swiftmodules": true,
+  "development_language": "it"
+}
