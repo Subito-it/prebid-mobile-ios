@@ -1,0 +1,9 @@
+platform :ios, "15.0"
+
+use_frameworks!
+
+target "FrameworkBuilder" do
+  pod "PrebidMobile", :path => "../"
+  pod "PrebidMobileGAMEventHandlers", :path => "../"
+  pod "Google-Mobile-Ads-SDK", "=11.2.0"
+end
