@@ -1,0 +1,12 @@
+name: FrameworkBuilder
+options:
+  bundleIdPrefix: com.frameworkbuilder
+  deploymentTarget:
+    iOS: 15.0
+  postGenCommand: "pod install"
+
+targets:
+  FrameworkBuilder:
+    type: application
+    platform: iOS
+    sources: [FrameworkBuilder]
