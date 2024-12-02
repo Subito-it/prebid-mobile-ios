@@ -25,7 +25,7 @@ class CustomRendererBannerController: NSObject, AdaptedController, PrebidConfigu
     var adSizes = [CGSize]()
     var adFormat: AdFormat?
     
-    var adBannerView: BannerView?
+    var adBannerView: PBBannerView?
     
     var testPBSSDKConfig = false
     
@@ -70,7 +70,7 @@ class CustomRendererBannerController: NSObject, AdaptedController, PrebidConfigu
         
         let size = adSizes[0]
 
-        adBannerView = BannerView(frame: CGRect(origin: .zero, size: size),
+        adBannerView = PBBannerView(frame: CGRect(origin: .zero, size: size),
                                   configID: prebidConfigId,
                                   adSize: size)
         
@@ -158,7 +158,7 @@ class CustomRendererBannerController: NSObject, AdaptedController, PrebidConfigu
         return rootController
     }
     
-    func bannerView(_ bannerView: BannerView,
+    func bannerView(_ bannerView: PBBannerView,
                     didReceiveAdWithAdSize adSize: CGSize) {
         resetEvents()
         reloadButton.isEnabled = true
@@ -182,21 +182,21 @@ class CustomRendererBannerController: NSObject, AdaptedController, PrebidConfigu
         }
     }
     
-    func bannerView(_ bannerView: BannerView, didFailToReceiveAdWith error: Error) {
+    func bannerView(_ bannerView: PBBannerView, didFailToReceiveAdWith error: Error) {
         resetEvents()
         reloadButton.isEnabled = true
         adViewDidFailToLoadAdButton.isEnabled = true
     }
 
-    func bannerViewWillPresentModal(_ bannerView: BannerView) {
+    func bannerViewWillPresentModal(_ bannerView: PBBannerView) {
         adViewWillPresentScreenButton.isEnabled = true
     }
     
-    func bannerViewDidDismissModal(_ bannerView: BannerView) {
+    func bannerViewDidDismissModal(_ bannerView: PBBannerView) {
         adViewDidDismissScreenButton.isEnabled = true
     }
     
-    func bannerViewWillLeaveApplication(_ bannerView: BannerView) {
+    func bannerViewWillLeaveApplication(_ bannerView: PBBannerView) {
         adViewWillLeaveApplicationButton.isEnabled = true
     }
     

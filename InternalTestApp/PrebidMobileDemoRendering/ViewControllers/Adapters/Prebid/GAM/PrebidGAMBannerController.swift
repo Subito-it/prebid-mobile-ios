@@ -28,7 +28,7 @@ class PrebidGAMBannerController: NSObject, AdaptedController, PrebidConfigurable
     var validAdSizes = [GADAdSize]()
     var adFormat: AdFormat?
     
-    var adBannerView : BannerView?
+    var adBannerView : PBBannerView?
     
     weak var rootController: AdapterViewController?
     
@@ -64,7 +64,7 @@ class PrebidGAMBannerController: NSObject, AdaptedController, PrebidConfigurable
         
         let adEventHandler = GAMBannerEventHandler(adUnitID: gamAdUnitId, validGADAdSizes: validAdSizes.map(NSValueFromGADAdSize))
         
-        adBannerView = BannerView(configID: prebidConfigId,  eventHandler: adEventHandler)
+        adBannerView = PBBannerView(configID: prebidConfigId,  eventHandler: adEventHandler)
        
         if (refreshInterval > 0) {
             adBannerView?.refreshInterval = refreshInterval
@@ -79,7 +79,7 @@ class PrebidGAMBannerController: NSObject, AdaptedController, PrebidConfigurable
         }
        
         adBannerView?.delegate = self
-        adBannerView?.accessibilityIdentifier = "BannerView"
+        adBannerView?.accessibilityIdentifier = "PBBannerView"
         
         // imp[].ext.data
         if let adUnitContext = AppConfiguration.shared.adUnitContext {
@@ -144,7 +144,7 @@ class PrebidGAMBannerController: NSObject, AdaptedController, PrebidConfigurable
         return rootController
     }
     
-    func bannerView(_ bannerView: BannerView, didReceiveAdWithAdSize adSize: CGSize) {
+    func bannerView(_ bannerView: PBBannerView, didReceiveAdWithAdSize adSize: CGSize) {
         resetEvents()
         reloadButton.isEnabled = true
         adViewDidReceiveAdButton.isEnabled = true
@@ -161,21 +161,21 @@ class PrebidGAMBannerController: NSObject, AdaptedController, PrebidConfigurable
         setBannerSize(adSize)
     }
     
-    func bannerView(_ bannerView: BannerView, didFailToReceiveAdWith error: Error) {
+    func bannerView(_ bannerView: PBBannerView, didFailToReceiveAdWith error: Error) {
         resetEvents()
         reloadButton.isEnabled = true
         adViewDidFailToLoadAdButton.isEnabled = true
     }
     
-    func bannerViewWillPresentModal(_ bannerView: BannerView) {
+    func bannerViewWillPresentModal(_ bannerView: PBBannerView) {
         adViewWillPresentScreenButton.isEnabled = true
     }
     
-    func bannerViewDidDismissModal(_ bannerView: BannerView) {
+    func bannerViewDidDismissModal(_ bannerView: PBBannerView) {
         adViewDidDismissScreenButton.isEnabled = true
     }
     
-    func bannerViewWillLeaveApplication(_ bannerView: BannerView) {
+    func bannerViewWillLeaveApplication(_ bannerView: PBBannerView) {
         adViewWillLeaveApplicationButton.isEnabled = true
     }
     

@@ -31,7 +31,7 @@ class ParameterBuilderServiceTest : XCTestCase {
         UtilitiesForTesting.resetTargeting(.shared)
     }
     
-    var sdkVersion: String { return Bundle(for: BannerView.self).infoDictionary!["CFBundleShortVersionString"] as! String }
+    var sdkVersion: String { return Bundle(for: PBBannerView.self).infoDictionary!["CFBundleShortVersionString"] as! String }
     
     func testBuildParamsDict() {
         let url = "https://openx.com"

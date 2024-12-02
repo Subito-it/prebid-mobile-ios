@@ -28,36 +28,36 @@ import UIKit
 
     /*!
      @abstract Notifies the delegate that an ad has been successfully loaded and rendered.
-     @param bannerView The BannerView instance sending the message.
+     @param bannerView The PBBannerView instance sending the message.
      */
-    @objc optional func bannerView(_ bannerView: BannerView, didReceiveAdWithAdSize adSize: CGSize)
+    @objc optional func bannerView(_ bannerView: PBBannerView, didReceiveAdWithAdSize adSize: CGSize)
 
     /*!
      @abstract Notifies the delegate of an error encountered while loading or rendering an ad.
-     @param bannerView The BannerView instance sending the message.
+     @param bannerView The PBBannerView instance sending the message.
      @param error The error encountered while attempting to receive or render the
      ad.
      */
-    @objc optional func bannerView(_ bannerView: BannerView,
+    @objc optional func bannerView(_ bannerView: PBBannerView,
                                    didFailToReceiveAdWith error: Error)
 
     /*!
      @abstract Notifies the delegate whenever current app goes in the background due to user click.
-     @param bannerView The BannerView instance sending the message.
+     @param bannerView The PBBannerView instance sending the message.
      */
-    @objc optional func bannerViewWillLeaveApplication(_ bannerView: BannerView)
+    @objc optional func bannerViewWillLeaveApplication(_ bannerView: PBBannerView)
 
     /*!
      @abstract Notifies delegate that the banner view will launch a modal
      on top of the current view controller, as a result of user interaction.
-     @param bannerView The BannerView instance sending the message.
+     @param bannerView The PBBannerView instance sending the message.
      */
-    @objc optional func bannerViewWillPresentModal(_ bannerView: BannerView)
+    @objc optional func bannerViewWillPresentModal(_ bannerView: PBBannerView)
 
     /*!
      @abstract Notifies delegate that the banner view has dismissed the modal on top of
      the current view controller.
-     @param bannerView The BannerView instance sending the message.
+     @param bannerView The PBBannerView instance sending the message.
      */
-    @objc optional func bannerViewDidDismissModal(_ bannerView: BannerView)
+    @objc optional func bannerViewDidDismissModal(_ bannerView: PBBannerView)
 }

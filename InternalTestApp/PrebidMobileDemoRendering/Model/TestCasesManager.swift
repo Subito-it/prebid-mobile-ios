@@ -1777,7 +1777,7 @@ struct TestCaseManager {
                         
                         var prebidConfigId = "prebid-ita-video-outstream"
                         let adSize = CGSize(width: 300, height: 250)
-                        let adBannerView = BannerView(frame: CGRect(origin: .zero, size: adSize),configID: prebidConfigId,adSize: adSize)
+                        let adBannerView = PBBannerView(frame: CGRect(origin: .zero, size: adSize),configID: prebidConfigId,adSize: adSize)
                         
                         adBannerView.adFormat = .video
                         adBannerView.videoParameters.placement = .InFeed
@@ -1929,7 +1929,7 @@ struct TestCaseManager {
                         let validAdSize = GADAdSizeMediumRectangle
                         let adSize = validAdSize.size
                         let adEventHandler = GAMBannerEventHandler(adUnitID: gamAdUnitId, validGADAdSizes: [NSValueFromGADAdSize(validAdSize)])
-                        let adBannerView = BannerView(configID: prebidConfigId,eventHandler: adEventHandler)
+                        let adBannerView = PBBannerView(configID: prebidConfigId,eventHandler: adEventHandler)
                         adBannerView.adFormat = .video
                         adBannerView.videoParameters.placement = .InFeed
                         adBannerView.delegate = feedVC

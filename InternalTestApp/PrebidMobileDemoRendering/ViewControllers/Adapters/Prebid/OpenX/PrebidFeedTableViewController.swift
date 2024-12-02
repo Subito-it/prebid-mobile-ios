@@ -81,22 +81,22 @@ class PrebidFeedTableViewController: UITableViewController, ConfigurableViewCont
         return self
     }
     
-    func bannerView(_ bannerView: BannerView, didReceiveAdWithAdSize adSize: CGSize) {
+    func bannerView(_ bannerView: PBBannerView, didReceiveAdWithAdSize adSize: CGSize) {
     }
     
-    func bannerView(_ bannerView: BannerView, didFailToReceiveAdWith error: Error) {
+    func bannerView(_ bannerView: PBBannerView, didFailToReceiveAdWith error: Error) {
     }
     
-    func bannerViewWillPresentModal(_ bannerView: BannerView) {
+    func bannerViewWillPresentModal(_ bannerView: PBBannerView) {
     }
     
     //TODO: do we need this ??
-    func bannerViewWillDismissModal(_ bannerView: BannerView) {
+    func bannerViewWillDismissModal(_ bannerView: PBBannerView) {
     }
     
-    func bannerViewDidDismissModal(_ bannerView: BannerView) {
+    func bannerViewDidDismissModal(_ bannerView: PBBannerView) {
     }
     
-    func bannerViewWillLeaveApplication(_ bannerView: BannerView) {
+    func bannerViewWillLeaveApplication(_ bannerView: PBBannerView) {
     }
 }

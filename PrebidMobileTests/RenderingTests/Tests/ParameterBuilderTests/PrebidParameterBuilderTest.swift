@@ -388,7 +388,7 @@ class PrebidParameterBuilderTest: XCTestCase {
         let apiSignalsAsNumbers = PrebidConstants.supportedRenderingBannerAPISignals.map { NSNumber(value: $0.value) }
         
         // Rendering API
-        let renderingBannerAdUnit = BannerView(frame: .init(origin: .zero, size: CGSize(width: 320, height: 50)), configID: "test", adSize: CGSize(width: 320, height: 50))
+        let renderingBannerAdUnit = PBBannerView(frame: .init(origin: .zero, size: CGSize(width: 320, height: 50)), configID: "test", adSize: CGSize(width: 320, height: 50))
         bidRequest = buildBidRequest(with: renderingBannerAdUnit.adUnitConfig)
         
         bidRequest.imp.forEach { imp in
@@ -559,7 +559,7 @@ class PrebidParameterBuilderTest: XCTestCase {
     }
 
     func testDefaultVideoParameters_RenderingAPI() {
-        let adUnit = BannerView(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 250)), configID: "configId", adSize: CGSize(width: 300, height: 250))
+        let adUnit = PBBannerView(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 250)), configID: "configId", adSize: CGSize(width: 300, height: 250))
         adUnit.adFormat = .video
         let bidRequest = buildBidRequest(with: adUnit.adUnitConfig)
 
@@ -614,7 +614,7 @@ class PrebidParameterBuilderTest: XCTestCase {
     }
 
     func testParameterBuilderOutstream() {
-        let adUnit = BannerView(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 250)), configID: "configID", adSize: CGSize(width: 300, height: 250))
+        let adUnit = PBBannerView(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 250)), configID: "configID", adSize: CGSize(width: 300, height: 250))
 
         let adConfiguration = adUnit.adUnitConfig.adConfiguration
         adConfiguration.adFormats = [.video]

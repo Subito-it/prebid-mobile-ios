@@ -469,7 +469,7 @@
 		5BC37A7F271F1D0000444D5E /* PBMBidRequester.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC37839271F1CFF00444D5E /* PBMBidRequester.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BC37A80271F1D0000444D5E /* PBMORTBMacrosHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC3783A271F1CFF00444D5E /* PBMORTBMacrosHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BC37A85271F1D0000444D5E /* BannerEventLoadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC37842271F1CFF00444D5E /* BannerEventLoadingDelegate.swift */; };
-		5BC37A86271F1D0000444D5E /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC37843271F1CFF00444D5E /* BannerView.swift */; };
+		5BC37A86271F1D0000444D5E /* PBBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC37843271F1CFF00444D5E /* PBBannerView.swift */; };
 		5BC37A87271F1D0000444D5E /* InterstitialEventInteractionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC37844271F1CFF00444D5E /* InterstitialEventInteractionDelegate.swift */; };
 		5BC37A88271F1D0000444D5E /* RewardedAdUnitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC37845271F1CFF00444D5E /* RewardedAdUnitDelegate.swift */; };
 		5BC37A89271F1D0000444D5E /* RewardedEventInteractionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC37846271F1CFF00444D5E /* RewardedEventInteractionDelegate.swift */; };
@@ -1333,7 +1333,7 @@
 		5BC37839271F1CFF00444D5E /* PBMBidRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMBidRequester.h; sourceTree = "<group>"; };
 		5BC3783A271F1CFF00444D5E /* PBMORTBMacrosHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMORTBMacrosHelper.h; sourceTree = "<group>"; };
 		5BC37842271F1CFF00444D5E /* BannerEventLoadingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerEventLoadingDelegate.swift; sourceTree = "<group>"; };
-		5BC37843271F1CFF00444D5E /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		5BC37843271F1CFF00444D5E /* PBBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBBannerView.swift; sourceTree = "<group>"; };
 		5BC37844271F1CFF00444D5E /* InterstitialEventInteractionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialEventInteractionDelegate.swift; sourceTree = "<group>"; };
 		5BC37845271F1CFF00444D5E /* RewardedAdUnitDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAdUnitDelegate.swift; sourceTree = "<group>"; };
 		5BC37846271F1CFF00444D5E /* RewardedEventInteractionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedEventInteractionDelegate.swift; sourceTree = "<group>"; };
@@ -2530,7 +2530,7 @@
 			isa = PBXGroup;
 			children = (
 				5BC37842271F1CFF00444D5E /* BannerEventLoadingDelegate.swift */,
-				5BC37843271F1CFF00444D5E /* BannerView.swift */,
+				5BC37843271F1CFF00444D5E /* PBBannerView.swift */,
 				5BC37844271F1CFF00444D5E /* InterstitialEventInteractionDelegate.swift */,
 				5BC37845271F1CFF00444D5E /* RewardedAdUnitDelegate.swift */,
 				5BC37846271F1CFF00444D5E /* RewardedEventInteractionDelegate.swift */,
@@ -4149,7 +4149,7 @@
 				5BC37A92271F1D0000444D5E /* RewardedEventLoadingDelegate.swift in Sources */,
 				53A657B02A8B64C200AE0B4F /* PBMORTBSDKConfiguration.m in Sources */,
 				92C85D5C27A96C680080BAC5 /* NativeImage.swift in Sources */,
-				5BC37A86271F1D0000444D5E /* BannerView.swift in Sources */,
+				5BC37A86271F1D0000444D5E /* PBBannerView.swift in Sources */,
 				5BC3796E271F1D0000444D5E /* PBMVastWrapperAd.m in Sources */,
 				537B6518283372FD008AE9D1 /* PathBuilder.swift in Sources */,
 				FAEE4D1A262DC2B200AD9966 /* NativeAd.swift in Sources */,

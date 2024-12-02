@@ -17,7 +17,7 @@ import XCTest
 
 @testable import PrebidMobile
 
-class MockBannerView: BannerView {
+class MockBannerView: PBBannerView {
     override var lastBidResponse: BidResponse? {
         return WinningBidResponseFabricator.makeWinningBidResponse(bidPrice: 0.85)
     }
@@ -86,13 +86,13 @@ class PBMBannerViewTest: XCTestCase {
             return nil
         }
         
-        func bannerView(_ bannerView: BannerView, didFailToReceiveAdWith error: Error) {
+        func bannerView(_ bannerView: PBBannerView, didFailToReceiveAdWith error: Error) {
             XCTAssertEqual(error as NSError?, PBMError.prebidInvalidAccountId as NSError?)
             XCTAssertNotNil(bannerView.lastBidResponse)
             exp.fulfill()
         }
         
-        func bannerView(_ bannerView: BannerView, didReceiveAdWithAdSize adSize: CGSize) {
+        func bannerView(_ bannerView: PBBannerView, didReceiveAdWithAdSize adSize: CGSize) {
             XCTFail("Ad unexpectedly loaded successfully...")
             exp.fulfill()
         }

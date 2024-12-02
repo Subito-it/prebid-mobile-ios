@@ -57,7 +57,7 @@ typedef NS_ENUM(NSInteger, PBMLocationSourceValues) {
 
 @property (class, readonly) NSString *VideoAdView;
 
-@property (class, readonly) NSString *BannerView;
+@property (class, readonly) NSString *PBBannerView;
 
 @end
 

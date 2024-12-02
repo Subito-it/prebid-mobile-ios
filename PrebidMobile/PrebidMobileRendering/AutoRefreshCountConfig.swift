@@ -29,7 +29,7 @@ public class AutoRefreshCountConfig: NSObject {
     public var autoRefreshDelay: TimeInterval? 
     
     /**
-     Maximum number of times the BannerView should refresh.
+     Maximum number of times the PBBannerView should refresh.
 
      This value will be overwritten with any values received from the server.
      Using a value of 0 indicates there is no maximum.
@@ -39,7 +39,7 @@ public class AutoRefreshCountConfig: NSObject {
     public var autoRefreshMax: Double?  = 0
     
     /**
-     The number of times the BannerView has been refreshed.
+     The number of times the PBBannerView has been refreshed.
      */
     public var numRefreshes = 0
 }

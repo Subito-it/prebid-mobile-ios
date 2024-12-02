@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)adDidClose;
 
 @optional
-//Only used by BannerView & PBMVideoAdView
+//Only used by PBBannerView & PBMVideoAdView
 // The actual top layer view that displays the ad
 - (UIView *)displayView;
 

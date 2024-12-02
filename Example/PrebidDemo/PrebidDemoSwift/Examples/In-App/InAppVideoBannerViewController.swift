@@ -21,7 +21,7 @@ fileprivate let storedImpVideoBanner = "prebid-demo-video-outstream"
 class InAppVideoBannerViewController: BannerBaseViewController, BannerViewDelegate {
     
     // Prebid
-    private var prebidBannerView: BannerView!
+    private var prebidBannerView: PBBannerView!
     
     override func loadView() {
         super.loadView()
@@ -30,10 +30,10 @@ class InAppVideoBannerViewController: BannerBaseViewController, BannerViewDelega
     }
     
     func createAd() {
-        // 1. Create a BannerView
-        prebidBannerView = BannerView(frame: CGRect(origin: .zero, size: adSize), configID: storedImpVideoBanner, adSize: adSize)
+        // 1. Create a PBBannerView
+        prebidBannerView = PBBannerView(frame: CGRect(origin: .zero, size: adSize), configID: storedImpVideoBanner, adSize: adSize)
         
-        // 2. Configure the BannerView
+        // 2. Configure the PBBannerView
         prebidBannerView.delegate = self
         prebidBannerView.adFormat = .video
         prebidBannerView.videoParameters.placement = .InBanner
@@ -53,7 +53,7 @@ class InAppVideoBannerViewController: BannerBaseViewController, BannerViewDelega
         self
     }
     
-    func bannerView(_ bannerView: BannerView, didFailToReceiveAdWith error: Error) {
+    func bannerView(_ bannerView: PBBannerView, didFailToReceiveAdWith error: Error) {
         PrebidDemoLogger.shared.error("Banner view did fail to receive ad with error: \(error)")
     }
 }

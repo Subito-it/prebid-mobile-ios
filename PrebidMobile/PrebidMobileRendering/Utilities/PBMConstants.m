@@ -57,7 +57,7 @@ const NSTimeInterval PBMAdPrefetchTime = 3;
     return @"PBMVideoAdView";
 }
 
-+ (NSString *)BannerView {
++ (NSString *)PBBannerView {
     return @"PrebidBannerView";
 }
 

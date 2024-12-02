@@ -24,7 +24,7 @@ fileprivate let gamAdUnitVideoBannerRendering = "/21808260008/prebid_oxb_300x250
 class GAMVideoBannerViewController: BannerBaseViewController, BannerViewDelegate {
     
     // Prebid
-    private var prebidBannerView: BannerView!
+    private var prebidBannerView: PBBannerView!
     
     // GAM
     private var gamBanner: GAMBannerView!
@@ -38,10 +38,10 @@ class GAMVideoBannerViewController: BannerBaseViewController, BannerViewDelegate
     func createAd() {
         // 1. Create a GAMBannerEventHandler
         let eventHandler = GAMBannerEventHandler(adUnitID: gamAdUnitVideoBannerRendering, validGADAdSizes: [GADAdSizeMediumRectangle].map(NSValueFromGADAdSize))
-        // 2. Create a BannerView
-        prebidBannerView = BannerView(frame: CGRect(origin: .zero, size: adSize), configID: storedImpVideoBanner, adSize: adSize, eventHandler: eventHandler)
+        // 2. Create a PBBannerView
+        prebidBannerView = PBBannerView(frame: CGRect(origin: .zero, size: adSize), configID: storedImpVideoBanner, adSize: adSize, eventHandler: eventHandler)
         
-        // 3. Configure the BannerView
+        // 3. Configure the PBBannerView
         prebidBannerView.adFormat = .video
         prebidBannerView.videoParameters.placement = .InBanner
         prebidBannerView.delegate = self
@@ -60,7 +60,7 @@ class GAMVideoBannerViewController: BannerBaseViewController, BannerViewDelegate
         self
     }
     
-    func bannerView(_ bannerView: BannerView, didFailToReceiveAdWith error: Error) {
+    func bannerView(_ bannerView: PBBannerView, didFailToReceiveAdWith error: Error) {
         PrebidDemoLogger.shared.error("Banner view did fail to receive ad with error: \(error)")
     }
 }
