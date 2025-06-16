@@ -8,7 +8,7 @@ use_frameworks!
 target "FrameworkBuilder" do
   pod "PrebidMobile", :path => "../../"
   pod "PrebidMobileGAMEventHandlers", :path => "../../"
-  pod "Google-Mobile-Ads-SDK", "=11.2.0"
+  pod "Google-Mobile-Ads-SDK", ">=12.0.0"
 end
 
 pre_install do |installer|
